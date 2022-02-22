@@ -1,0 +1,52 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<body class="flex h-screen font-sans">
+		    <div id="sidebar" class="h-screen w-16 menu bg-white text-white px-3 flex  nunito static fixed shadow">
+
+					<ul class="list-reset ">
+						<li class="my-2 md:my-0">
+							<a href="#" class="block py-1 md:py-3 pl-1 align-middle">
+								<img src="https://global-uploads.webflow.com/602beff93642842e37cfd20c/6067708a8d2cab5a6f295cfc_HS%20pink%20ribbon%20square-01.svg">
+							</a>
+						</li>
+						<li class="my-2 md:my-0"> 
+							<a href="#" class="no-underline text-pink-400 bg-pink-200 rounded h-10 w-10 flex justify-center items-center">
+								<i class="fas fa-ticket fa-fw"></i>
+							</a>
+						</li>
+						<li class="my-2 md:my-0 ">
+							<a href="#" class="text-gray-600 no-underline hover:text-pink-400 hover:bg-pink-200 rounded h-10 w-10 flex justify-center items-center">
+								<i class="fas fa-users fa-fw"></i>
+							</a>
+						</li>
+
+						<li class="my-2 md:my-0 absolute bottom-3">
+								<a href="#" class="text-gray-600 no-underline hover:text-pink-400 bg-gray-100 rounded-full h-10 w-10 flex justify-center items-center">
+									<i class="fas fa-user fa-fw"></i>
+								</a>
+						</li>
+		
+					</ul>
+			
+				</div>
+		<div class="flex flex-row flex-wrap flex-1 flex-grow content-start pl-16">
+			{% block content %}
+			{% endblock content %}
+		</div>
+
+		<div class="rounded-full bg-purple-500 w-12 h-12 fixed bottom-8 right-8 flex justify-center items-center text-white">
+			<a><i class="fa-regular fa-message text-xl"></i></a>
+		</div>
+	</body>
+</html>

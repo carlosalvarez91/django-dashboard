@@ -1,0 +1,40 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+<div class="w-full p-8">
+    
+    <div class="border border-solid border-gray-200 w-full rounded-lg p-4">
+        {% include 'event.html' %}
+    </div>
+
+    <div class="w-full mt-2 p-8">
+        <div class="w-full flex justify-between">
+            <div class="inline-flex items-center">
+                <div>
+                    Event Stats
+                </div>
+            </div>
+            <div>
+                <button class="mr-3 bg-purple-400 text-white py-2 px-4 rounded-lg">
+                    <i class="fa fa-download ml-1"></i>
+                    Export Report
+                </button>
+            </div>
+        </div>
+        <div class="flex justify-between">
+                <div class="w-7/12 grid grid-cols-3 gap-3">
+                    {% include 'cards.html' %}
+                </div>            
+                <div class="w-4/12 pt-3">
+                    {% include 'chart.html' %}
+                </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
